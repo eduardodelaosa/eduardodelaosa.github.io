@@ -1,0 +1,67 @@
+﻿.redes {
+  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 7vw, 5rem);
+  background: #f2f4f1;
+}
+
+.redes .section-title::after {
+  background: linear-gradient(90deg, var(--color-blue-electric), var(--color-violet), var(--color-magenta), var(--color-orange));
+  width: 64px;
+  height: 3px;
+}
+
+.redes__grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.redes__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.75rem 2.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+  color: var(--color-text-secondary);
+  min-width: 130px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.redes__card-glow {
+  display: none;
+}
+
+.redes__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent, var(--color-blue-accent));
+  color: var(--color-text);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.redes__card-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .redes__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .redes__card {
+    width: 100%;
+    max-width: 260px;
+  }
+}

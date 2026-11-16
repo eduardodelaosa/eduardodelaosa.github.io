@@ -1,0 +1,41 @@
+@media (min-width: 1081px) and (max-width: 1600px) and (max-height: 900px) {
+  main {
+    padding-top: var(--nav-height);
+  }
+
+  .hero,
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - var(--nav-height));
+    min-height: calc(100dvh - var(--nav-height));
+    scroll-margin-top: var(--nav-height);
+  }
+
+  .section {
+    padding-top: clamp(1.25rem, 3vh, 2.5rem);
+    padding-bottom: clamp(1.25rem, 3vh, 2.5rem);
+  }
+
+  .hero {
+    padding-top: clamp(0.75rem, 2vh, 1.5rem);
+    padding-bottom: clamp(0.75rem, 2vh, 1.5rem);
+  }
+
+  .section-header {
+    margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
+  }
+
+  .sobre-mi__photo-section {
+    position: static;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .sobre-mi__photo-wrapper {
+    width: 200px;
+    flex-shrink: 0;
+  }
+}

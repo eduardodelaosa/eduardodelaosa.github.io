@@ -1,0 +1,461 @@
+{
+  "PC-1920": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": 10,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 205.2,
+    "leftBottom": 977.5,
+    "leftHeight": 772.3,
+    "rightTop": 205.2,
+    "rightBottom": 977.5,
+    "rightHeight": 772.3,
+    "topAligned": true,
+    "bottomAligned": true,
+    "introDisplay": "none",
+    "introVisible": false,
+    "introHeight": 0,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 772.3,
+      "rightHeight": 772.3,
+      "leftTop": 205.2,
+      "leftBottom": 977.5,
+      "rightBottom": 977.5,
+      "topAligned": true,
+      "bottomAligned": true
+    },
+    "closedState": {
+      "leftTop": 205.2,
+      "leftBottom": 977.5,
+      "rightHeight": 772.3,
+      "bottomAligned": true,
+      "sameAsBefore": true
+    }
+  },
+  "PC-1536": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": 10,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 193.7,
+    "leftBottom": 773.7,
+    "leftHeight": 580,
+    "rightTop": 193.7,
+    "rightBottom": 773.7,
+    "rightHeight": 579.9,
+    "topAligned": true,
+    "bottomAligned": true,
+    "introDisplay": "none",
+    "introVisible": false,
+    "introHeight": 0,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 592.3,
+      "rightHeight": 592.3,
+      "leftTop": 193.7,
+      "leftBottom": 786,
+      "rightBottom": 786,
+      "topAligned": true,
+      "bottomAligned": true
+    },
+    "closedState": {
+      "leftTop": 193.7,
+      "leftBottom": 773.7,
+      "rightHeight": 579.9,
+      "bottomAligned": true,
+      "sameAsBefore": true
+    }
+  },
+  "PC-1366": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": 10,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 191.5,
+    "leftBottom": 734.3,
+    "leftHeight": 542.8,
+    "rightTop": 191.5,
+    "rightBottom": 734.3,
+    "rightHeight": 542.8,
+    "topAligned": true,
+    "bottomAligned": true,
+    "introDisplay": "none",
+    "introVisible": false,
+    "introHeight": 0,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 542.8,
+      "rightHeight": 542.8,
+      "leftTop": 191.5,
+      "leftBottom": 734.3,
+      "rightBottom": 734.3,
+      "topAligned": true,
+      "bottomAligned": true
+    },
+    "closedState": {
+      "leftTop": 191.5,
+      "leftBottom": 734.3,
+      "rightHeight": 542.8,
+      "bottomAligned": true,
+      "sameAsBefore": true
+    }
+  },
+  "TB-H-1024": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": 6,
+    "rowGap1": 4,
+    "rowGap2": 4,
+    "sameWidth": true,
+    "leftTop": 155.9,
+    "leftBottom": 703.9,
+    "leftHeight": 548,
+    "rightTop": 155.9,
+    "rightBottom": 703.9,
+    "rightHeight": 548,
+    "topAligned": true,
+    "bottomAligned": true,
+    "introDisplay": "none",
+    "introVisible": false,
+    "introHeight": 0,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 548,
+      "rightHeight": 548,
+      "leftTop": 155.9,
+      "leftBottom": 703.9,
+      "rightBottom": 703.9,
+      "topAligned": true,
+      "bottomAligned": true
+    },
+    "closedState": {
+      "leftTop": 155.9,
+      "leftBottom": 703.9,
+      "rightHeight": 548,
+      "bottomAligned": true,
+      "sameAsBefore": true
+    }
+  },
+  "TB-V-768": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": 10,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 463.2,
+    "leftBottom": 1049.2,
+    "leftHeight": 586,
+    "rightTop": 463.2,
+    "rightBottom": 1049.2,
+    "rightHeight": 586,
+    "topAligned": true,
+    "bottomAligned": true,
+    "introDisplay": "block",
+    "introVisible": true,
+    "introHeight": 260.8,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 624.8,
+      "rightHeight": 624.9,
+      "leftTop": 463.2,
+      "leftBottom": 1088,
+      "rightBottom": 1088,
+      "topAligned": true,
+      "bottomAligned": true
+    },
+    "closedState": {
+      "leftTop": 463.2,
+      "leftBottom": 1049.2,
+      "rightHeight": 586,
+      "bottomAligned": true,
+      "sameAsBefore": true
+    }
+  },
+  "TB-V-810": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": 10,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 472.3,
+    "leftBottom": 1060.3,
+    "leftHeight": 588,
+    "rightTop": 472.3,
+    "rightBottom": 1060.3,
+    "rightHeight": 587.9,
+    "topAligned": true,
+    "bottomAligned": true,
+    "introDisplay": "block",
+    "introVisible": true,
+    "introHeight": 269.3,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 615.1,
+      "rightHeight": 615,
+      "leftTop": 472.3,
+      "leftBottom": 1087.4,
+      "rightBottom": 1087.4,
+      "topAligned": true,
+      "bottomAligned": true
+    },
+    "closedState": {
+      "leftTop": 472.3,
+      "leftBottom": 1060.3,
+      "rightHeight": 587.9,
+      "bottomAligned": true,
+      "sameAsBefore": true
+    }
+  },
+  "MV-390": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": -358,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 171.7,
+    "leftBottom": 866.1,
+    "leftHeight": 694.4,
+    "rightTop": 898.1,
+    "rightBottom": 1386.6,
+    "rightHeight": 488.5,
+    "topAligned": false,
+    "bottomAligned": false,
+    "introDisplay": "none",
+    "introVisible": false,
+    "introHeight": 0,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 694.4,
+      "rightHeight": 636.7,
+      "leftTop": 171.7,
+      "leftBottom": 866.1,
+      "rightBottom": 1534.8,
+      "topAligned": false,
+      "bottomAligned": false
+    },
+    "closedState": {
+      "leftTop": 171.7,
+      "leftBottom": 866.1,
+      "rightHeight": 488.5,
+      "bottomAligned": false,
+      "sameAsBefore": true
+    }
+  },
+  "MV-375": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": -343,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 168.8,
+    "leftBottom": 860.4,
+    "leftHeight": 691.6,
+    "rightTop": 892.4,
+    "rightBottom": 1394.9,
+    "rightHeight": 502.5,
+    "topAligned": false,
+    "bottomAligned": false,
+    "introDisplay": "none",
+    "introVisible": false,
+    "introHeight": 0,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 691.6,
+      "rightHeight": 650.7,
+      "leftTop": 168.8,
+      "leftBottom": 860.4,
+      "rightBottom": 1543.1,
+      "topAligned": false,
+      "bottomAligned": false
+    },
+    "closedState": {
+      "leftTop": 168.8,
+      "leftBottom": 860.4,
+      "rightHeight": 502.5,
+      "bottomAligned": false,
+      "sameAsBefore": true
+    }
+  },
+  "MH-844": {
+    "titles": [
+      "Email",
+      "Teléfono"
+    ],
+    "cardsCount": 2,
+    "colGap": 10,
+    "rowGap1": 10,
+    "rowGap2": 10,
+    "sameWidth": true,
+    "leftTop": 171.6,
+    "leftBottom": 708.7,
+    "leftHeight": 537.1,
+    "rightTop": 171.6,
+    "rightBottom": 708.7,
+    "rightHeight": 537.1,
+    "topAligned": true,
+    "bottomAligned": true,
+    "introDisplay": "none",
+    "introVisible": false,
+    "introHeight": 0,
+    "rightClipped": false,
+    "emailHref": "mailto:edu_teclistaa@gmail.com",
+    "transformed": [
+      "none",
+      "none",
+      "none"
+    ],
+    "overflowX": false,
+    "addressText": "29680 Avenida de los Frutales · Estepona · Málaga.",
+    "stableOnOpen": {
+      "emailTopDelta": 0,
+      "addressTopDelta": 0
+    },
+    "openState": {
+      "leftHeight": 537.2,
+      "rightHeight": 537.2,
+      "leftTop": 171.6,
+      "leftBottom": 708.8,
+      "rightBottom": 708.8,
+      "topAligned": true,
+      "bottomAligned": true
+    },
+    "closedState": {
+      "leftTop": 171.6,
+      "leftBottom": 708.7,
+      "rightHeight": 537.1,
+      "bottomAligned": true,
+      "sameAsBefore": true
+    }
+  }
+}

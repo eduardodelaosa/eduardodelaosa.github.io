@@ -1,0 +1,27 @@
+.placeholder-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px dashed rgba(31, 36, 33, 0.15);
+}
+
+.placeholder-image__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.placeholder-image__icon {
+  opacity: 0.3;
+}
+
+.placeholder-image__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+}

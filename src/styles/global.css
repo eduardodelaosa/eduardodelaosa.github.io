@@ -1,0 +1,177 @@
+:root {
+  --color-base: #f2f4f1;
+  --color-surface: #ffffff;
+  --color-surface-alt: #e8ece7;
+
+  --color-blue-electric: #2979ff;
+  --color-blue-deep: #1a3a6e;
+  --color-blue-accent: #448aff;
+  --color-violet: #7c4dff;
+  --color-purple: #8b5cf6;
+  --color-indigo: #5c6bc0;
+  --color-cyan: #00bcd4;
+  --color-turquoise: #26a69a;
+  --color-magenta: #d4628a;
+  --color-magenta-soft: #c2547a;
+  --color-burgundy: #8b2252;
+  --color-petrol: #1a535c;
+  --color-orange: #ff7043;
+
+  --color-text: #1f2421;
+  --color-text-secondary: rgba(31, 36, 33, 0.78);
+  --color-text-muted: rgba(31, 36, 33, 0.6);
+
+  --color-card: #ffffff;
+  --color-card-solid: #ffffff;
+  --color-border: rgba(31, 36, 33, 0.1);
+  --color-border-hover: rgba(31, 36, 33, 0.2);
+
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
+
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --transition-fast: 0.18s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  --container-max: 1200px;
+  --container-padding: clamp(1rem, 4vw, 3rem);
+  --nav-height: 64px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #315a78 #f4f6f3;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-base);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: var(--font-sans); cursor: pointer; border: none; background: none; }
+img { max-width: 100%; display: block; }
+ul, ol { list-style: none; }
+input, textarea, select { font-family: var(--font-sans); font-size: 1rem; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section {
+  padding: clamp(3rem, 7vw, 6rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-ambient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-divider {
+  display: block;
+  width: 100vw;
+  height: 1px;
+  flex: 0 0 1px;
+  margin: 0 0 0 calc(50% - 50vw);
+  border: none;
+  background: #78999c;
+  opacity: 0.55;
+  box-shadow: none;
+  pointer-events: none;
+  position: relative;
+  z-index: 5;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f4f6f3; }
+::-webkit-scrollbar-thumb {
+  background: #315a78;
+  border-radius: 6px;
+  border: 2px solid #f4f6f3;
+}
+::-webkit-scrollbar-thumb:hover { background: #264a63; }
+
+::selection {
+  background: rgba(124, 77, 255, 0.3);
+  color: #fff;
+}
