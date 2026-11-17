@@ -1,4 +1,4 @@
-﻿import { useCallback, useEffect } from 'react';
+﻿import { useCallback, useEffect, useLayoutEffect } from 'react';
 import type { ComponentType } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -48,6 +48,15 @@ function normalizedRoute(pathname: string) {
   return LEGACY_ROUTES[cleanPath] ?? (ROUTE_TO_SECTION[cleanPath] ? cleanPath : SECTION_ROUTES.inicio);
 }
 
+const LEGAL_FOOTER_QUERY =
+  '(min-width: 1500px) and (max-height: 820px) and (hover: hover) and (pointer: fine)';
+
+function clearLegalFooter(panel: HTMLElement) {
+  panel.removeAttribute('data-legal-footer');
+  const footer = panel.querySelector<HTMLElement>('.section-footer');
+  footer?.parentElement?.style.removeProperty('padding-bottom');
+}
+
 export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -73,6 +82,69 @@ export default function App() {
   useEffect(() => {
     const panel = document.querySelector<HTMLElement>(`.section-panel[data-section="${active}"]`);
     if (panel) panel.scrollTop = 0;
+  }, [active]);
+
+  useLayoutEffect(() => {
+    const media = window.matchMedia(LEGAL_FOOTER_QUERY);
+    let disposed = false;
+    let frameId = 0;
+    let settleTimer = 0;
+
+    const clearAll = () => {
+      document.querySelectorAll<HTMLElement>('.section-panel').forEach(clearLegalFooter);
+    };
+
+    const evaluate = () => {
+      if (disposed) return;
+      frameId = 0;
+      clearAll();
+
+      if (!media.matches) return;
+
+      const panel = document.querySelector<HTMLElement>('.section-panel.is-active');
+      const footer = panel?.querySelector<HTMLElement>('.section-footer');
+      const section = footer?.parentElement;
+
+      if (!panel || !footer || !section) return;
+      if (panel.scrollHeight > panel.clientHeight + 1) return;
+
+      const footerStyles = getComputedStyle(footer);
+      const flowReserve =
+        (Number.parseFloat(footerStyles.marginTop) || 0) + footer.getBoundingClientRect().height;
+      const basePadding = Number.parseFloat(getComputedStyle(section).paddingBottom) || 0;
+
+      if (flowReserve <= 0) return;
+
+      section.style.paddingBottom = `${basePadding + flowReserve}px`;
+      panel.setAttribute('data-legal-footer', 'fixed');
+    };
+
+    const schedule = (delay = 0) => {
+      if (disposed) return;
+      window.clearTimeout(settleTimer);
+      window.cancelAnimationFrame(frameId);
+      settleTimer = window.setTimeout(() => {
+        frameId = window.requestAnimationFrame(evaluate);
+      }, delay);
+    };
+
+    const handleViewportChange = () => schedule(80);
+
+    window.addEventListener('resize', handleViewportChange);
+    media.addEventListener('change', handleViewportChange);
+    document.fonts?.ready.then(() => schedule(120)).catch(() => undefined);
+    const settle = window.setTimeout(() => schedule(0), 600);
+    evaluate();
+
+    return () => {
+      disposed = true;
+      window.clearTimeout(settleTimer);
+      window.clearTimeout(settle);
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener('resize', handleViewportChange);
+      media.removeEventListener('change', handleViewportChange);
+      clearAll();
+    };
   }, [active]);
 
   const navigateSection = useCallback(

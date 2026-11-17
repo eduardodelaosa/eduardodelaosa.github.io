@@ -17,17 +17,13 @@ export default function Hero() {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         photo.style.removeProperty('height');
-        photo.style.removeProperty('margin-bottom');
 
         const desktop = window.matchMedia('(min-width: 1025px) and (hover: hover) and (pointer: fine)').matches;
         if (!desktop) return;
 
-        const naturalHeight = photo.getBoundingClientRect().height;
-        const naturalMarginBottom = parseFloat(getComputedStyle(photo).marginBottom) || 0;
         const textHeight = text.getBoundingClientRect().height;
 
         photo.style.height = `${textHeight}px`;
-        photo.style.marginBottom = `${Math.max(0, naturalHeight + naturalMarginBottom - textHeight)}px`;
       });
     };
 
@@ -42,7 +38,6 @@ export default function Hero() {
       observer.disconnect();
       window.removeEventListener('resize', alignPhoto);
       photo.style.removeProperty('height');
-      photo.style.removeProperty('margin-bottom');
     };
   }, []);
 

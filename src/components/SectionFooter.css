@@ -222,3 +222,19 @@
     margin-bottom: calc(2 * clamp(0.6rem, 1.3vh, 0.95rem) - 13px);
   }
 }
+
+/* Escritorio Windows al 125 %: franja legal fija solo en la sección activa sin scroll */
+@media (min-width: 1500px) and (max-height: 820px) and (hover: hover) and (pointer: fine) {
+  #root .section-panel[data-legal-footer="fixed"] > .hero > .section-footer,
+  #root .section-panel[data-legal-footer="fixed"] > .section > .section-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    margin: 0;
+    z-index: 5;
+    background: #0b0c0e;
+    box-shadow: none;
+  }
+}

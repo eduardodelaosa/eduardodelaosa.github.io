@@ -424,13 +424,17 @@ export default function Trabajos() {
     const media = section?.querySelector<HTMLElement>('.trabajos__media');
     const textCard = section?.querySelector<HTMLElement>('.trabajos__text-card');
     const textContent = section?.querySelector<HTMLElement>('.trabajos__text-content');
-    if (!section || !panel || !composition || !footer || !media || !textCard || !textContent) return;
+    const studio = section?.querySelector<HTMLElement>('.studio-card');
+    if (!section || !panel || !composition || !footer || !media || !textCard || !textContent || !studio) return;
 
     const tabletLandscape = window.matchMedia(
       '(orientation: landscape) and (hover: none) and (pointer: coarse) and (min-width: 768px) and (min-height: 600px)',
     );
     const desktopLandscape = window.matchMedia(
       '(orientation: landscape) and (hover: hover) and (pointer: fine) and (min-width: 1025px) and (min-height: 700px)',
+    );
+    const shortDesktop = window.matchMedia(
+      '(min-width: 1500px) and (max-height: 820px) and (hover: hover) and (pointer: fine)',
     );
     const paragraphs = Array.from(textContent.querySelectorAll<HTMLParagraphElement>('p'));
     const wrapper = composition.closest<HTMLElement>('.animate-fade-up');
@@ -546,8 +550,36 @@ export default function Trabajos() {
       }
     };
 
+    const clearShortComposition = () => {
+      composition.style.removeProperty('height');
+      composition.style.removeProperty('grid-template-columns');
+      media.style.removeProperty('height');
+      textCard.style.removeProperty('height');
+      textContent.style.removeProperty('height');
+    };
+
+    const fitShortComposition = () => {
+      if (!shortDesktop.matches) {
+        clearShortComposition();
+        return;
+      }
+
+      const targetHeight = studio.getBoundingClientRect().height;
+      if (!targetHeight) return;
+
+      const photoWidth = targetHeight * (4 / 3);
+      composition.style.height = `${targetHeight.toFixed(2)}px`;
+      composition.style.gridTemplateColumns = `${photoWidth.toFixed(2)}px minmax(0, 1fr)`;
+      media.style.height = `${targetHeight.toFixed(2)}px`;
+      textCard.style.height = `${targetHeight.toFixed(2)}px`;
+      textContent.style.height = `${targetHeight.toFixed(2)}px`;
+    };
+
     const apply = () => {
-      if (desktopLandscape.matches) {
+      const isShortDesktop = shortDesktop.matches;
+      fitShortComposition();
+
+      if (desktopLandscape.matches && !isShortDesktop) {
         fitDesktopText();
       } else {
         clearDesktopText();
@@ -556,7 +588,7 @@ export default function Trabajos() {
       if (!tabletLandscape.matches) {
         section.style.removeProperty('--trabajos-bottom-reserve');
         textContent.style.removeProperty('--trabajos-line-height');
-        textCard.style.removeProperty('height');
+        if (!isShortDesktop) textCard.style.removeProperty('height');
         return;
       }
 
@@ -632,6 +664,7 @@ export default function Trabajos() {
     window.addEventListener('resize', handleResize);
     tabletLandscape.addEventListener('change', handleResize);
     desktopLandscape.addEventListener('change', handleResize);
+    shortDesktop.addEventListener('change', handleResize);
     document.fonts?.ready
       .then(() => schedule(120))
       .catch(() => undefined);
@@ -645,10 +678,11 @@ export default function Trabajos() {
       window.removeEventListener('resize', handleResize);
       tabletLandscape.removeEventListener('change', handleResize);
       desktopLandscape.removeEventListener('change', handleResize);
+      shortDesktop.removeEventListener('change', handleResize);
       clearDesktopText();
+      clearShortComposition();
       section.style.removeProperty('--trabajos-bottom-reserve');
       textContent.style.removeProperty('--trabajos-line-height');
-      textCard.style.removeProperty('height');
     };
   }, []);
 

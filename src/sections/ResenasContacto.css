@@ -197,7 +197,8 @@ section#contacto-seccion .contacto-stats {
 
 @media (min-width: 1200px) and (min-height: 700px),
   (min-width: 1024px) and (min-height: 720px),
-  (min-width: 900px) and (min-height: 740px) {
+  (min-width: 900px) and (min-height: 740px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   .final-section__header {
     gap: 0.15rem;
     margin-bottom: clamp(0.2rem, 0.6vh, 0.4rem);
@@ -320,7 +321,8 @@ section#contacto-seccion .contacto-stats {
 }
 
 /* PC/escritorio: tarjetas compactas y fila de cuatro paneles estadÃ­sticos */
-@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine),
+  (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   section#contacto-seccion .final-section__header {
     margin-bottom: calc(25px + (clamp(0.45rem, 1.1vh, 0.9rem) + clamp(1rem, 2.5vh, 2rem)) / 2);
   }
@@ -1643,5 +1645,30 @@ section#contacto-seccion .contacto-stats {
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) and (min-width: 768px) and (min-height: 600px) {
   section#contacto-seccion .contacto-stat {
     transform: translateY(10px);
+  }
+}
+
+@media (min-width: 1025px) and (max-height: 820px) {
+  section#contacto-seccion .contacto-stats {
+    margin-bottom: clamp(0.5rem, 1.2vh, 0.9rem);
+  }
+}
+
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
+  section#contacto-seccion .final-section__header {
+    margin-bottom: clamp(0.5rem, 1.2vh, 0.9rem);
+  }
+}
+
+/* Escritorio Windows al 125 %: sube 8 px el contenido y libera el relleno inferior para evitar scroll */
+@media (min-width: 1500px) and (max-height: 820px) and (hover: hover) and (pointer: fine) {
+  #contacto-seccion.final-section.section {
+    padding-bottom: 0;
+  }
+
+  #contacto-seccion .final-section__inner,
+  #contacto-seccion .contacto-stats {
+    position: relative;
+    top: -8px;
   }
 }

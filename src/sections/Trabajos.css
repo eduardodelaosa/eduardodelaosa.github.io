@@ -1005,7 +1005,8 @@
 
 @media (min-width: 1200px) and (min-height: 700px),
   (min-width: 1024px) and (min-height: 720px),
-  (min-width: 900px) and (min-height: 740px) {
+  (min-width: 900px) and (min-height: 740px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #trabajos {
     scroll-margin-top: var(--nav-height);
   }
@@ -1180,6 +1181,15 @@
     bottom: clamp(0.5rem, 1.2vh, 0.9rem);
     background: #0b0c0e;
     box-shadow: 0 clamp(0.5rem, 1.2vh, 0.9rem) 0 0 #0b0c0e;
+  }
+}
+
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 760px) {
+  #trabajos .section-footer {
+    position: relative;
+    bottom: auto;
+    background: transparent;
+    box-shadow: none;
   }
 }
 
@@ -1627,5 +1637,33 @@
 @media (orientation: landscape) and (hover: hover) and (pointer: fine) and (min-width: 1025px) and (min-height: 700px) {
   #trabajos .trabajos__container .trabajos__text-content {
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) and (min-height: 700px) and (max-height: 820px) {
+  #trabajos .trabajos__container .trabajos__composition {
+    grid-template-columns: minmax(0, 0.24fr) minmax(0, 0.76fr);
+  }
+}
+
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 820px) {
+  #trabajos .trabajos__media img {
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
+  #trabajos .trabajos__container .trabajos__composition {
+    grid-template-columns: minmax(0, 0.32fr) minmax(0, 0.68fr);
+  }
+
+  #trabajos .trabajos__container .trabajos__media {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    align-self: start;
+  }
+
+  #trabajos .trabajos__media img {
+    object-fit: contain;
   }
 }

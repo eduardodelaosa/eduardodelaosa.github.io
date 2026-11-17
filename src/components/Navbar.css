@@ -214,3 +214,29 @@
   .navbar__mobile-social-link--whatsapp { color: #25d366; border-color: rgba(37, 211, 102, 0.35); }
   .navbar__mobile-social-link--instagram { border-color: rgba(214, 41, 118, 0.35); }
 }
+
+@media (min-width: 900px) and (max-width: 1080px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
+  .navbar__links,
+  .navbar__social {
+    display: flex;
+  }
+
+  .navbar__toggle,
+  .navbar__mobile {
+    display: none;
+  }
+
+  .navbar__links {
+    justify-content: space-between;
+    padding-inline: 0.25rem;
+  }
+
+  .navbar__links a {
+    padding-inline: 0.3rem;
+    font-size: 0.72rem;
+  }
+
+  .navbar__logo-text {
+    font-size: 0.8rem;
+  }
+}

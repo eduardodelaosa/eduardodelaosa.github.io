@@ -190,7 +190,8 @@
   .desarrollo-web__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (min-width: 768px) and (min-height: 700px) {
+@media (min-width: 768px) and (min-height: 700px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #cursos-online,
   #desarrollo-web {
     scroll-margin-top: var(--nav-height);
@@ -684,7 +685,8 @@
   }
 }
 
-@media (min-width: 768px) and (min-height: 700px) {
+@media (min-width: 768px) and (min-height: 700px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #desarrollo-web.desarrollo-web {
     height: auto;
     min-height: calc(100vh - var(--nav-height));
@@ -702,7 +704,8 @@
 
 @media (min-width: 1200px) and (min-height: 700px),
   (min-width: 1024px) and (min-height: 720px),
-  (min-width: 900px) and (min-height: 740px) {
+  (min-width: 900px) and (min-height: 740px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #desarrollo-web.desarrollo-web .section-subtitle {
     font-size: clamp(0.78rem, 1.4vh, 0.9rem);
   }
@@ -1115,6 +1118,15 @@
 
 #desarrollo-web.desarrollo-web .desarrollo-web__card-title {
   margin: 0;
+}
+
+/* Escritorio Windows al 125 %: sube 20 px todo el contenido bajo el subtítulo */
+@media (min-width: 1500px) and (max-height: 820px) and (hover: hover) and (pointer: fine) {
+  #desarrollo-web.desarrollo-web .desarrollo-web__intro-wrap,
+  #desarrollo-web.desarrollo-web .desarrollo-web__grid {
+    position: relative;
+    top: -20px;
+  }
 }
 
 /* Tablet vertical: espaciador de scroll medido para cerrar a 20 px de la franja legal */

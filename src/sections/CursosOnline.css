@@ -163,7 +163,8 @@
 }
 
 @media (min-width: 768px) and (min-height: 700px) and (orientation: landscape),
-  (min-width: 1025px) and (min-height: 700px) {
+  (min-width: 1025px) and (min-height: 700px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #cursos-online,
   #desarrollo-web {
     scroll-margin-top: var(--nav-height);
@@ -410,7 +411,8 @@
   }
 }
 
-@media (min-width: 768px) and (min-height: 700px) {
+@media (min-width: 768px) and (min-height: 700px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #cursos-online.cursos {
     height: auto;
     min-height: 0;
@@ -472,7 +474,8 @@
 
 @media (min-width: 1200px) and (min-height: 700px),
   (min-width: 1024px) and (min-height: 720px),
-  (min-width: 900px) and (min-height: 740px) {
+  (min-width: 900px) and (min-height: 740px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #cursos-online.cursos .section-subtitle {
     font-size: clamp(0.78rem, 1.4vh, 0.9rem);
   }
@@ -529,7 +532,8 @@
   }
 }
 
-@media (min-width: 1025px) and (min-height: 700px) {
+@media (min-width: 1025px) and (min-height: 700px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #cursos-online.cursos {
     height: auto;
     min-height: calc(100vh - var(--nav-height));
@@ -605,7 +609,8 @@
 }
 
 /* Compactado vertical (~40 px) manteniendo el ancho horizontal */
-@media (min-width: 1025px) and (min-height: 700px) {
+@media (min-width: 1025px) and (min-height: 700px),
+  (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
   #cursos-online.cursos .cursos__feature {
     margin-bottom: 40px;
     padding-block: clamp(0.85rem, 1.5vw, 1.25rem);
@@ -1021,5 +1026,64 @@
 @media (min-width: 768px) and (max-width: 1080px) and (orientation: portrait) and (min-height: 1900px) {
   #root #cursos-online.cursos {
     --cursos-text-size: max(19.2px, calc(0.85vw + 8.47px));
+  }
+}
+
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) and (max-height: 699px),
+  (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) and (hover: hover) and (pointer: fine) and (max-height: 699px) {
+  #cursos-online.cursos .cursos__feature {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    margin-bottom: 24px;
+    margin-top: 0;
+    top: 0;
+    grid-template-columns: clamp(240px, 22vw, 300px) minmax(0, 1fr);
+    grid-template-rows: auto;
+    align-items: start;
+  }
+
+  #cursos-online.cursos .cursos__feature-left {
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
+    gap: clamp(0.4rem, 1vh, 0.75rem);
+  }
+
+  #cursos-online.cursos .cursos__feature-left > .cursos__feature-media,
+  #cursos-online.cursos .cursos__feature-left > .cursos__feature-video {
+    flex: 0 0 auto;
+    min-height: 0;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+  }
+
+  #cursos-online.cursos .cursos__feature-copy,
+  #cursos-online.cursos .cursos__feature-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 0;
+    height: auto;
+    padding: 0;
+  }
+
+  #cursos-online.cursos .cursos__feature-inner {
+    gap: clamp(0.35rem, 1vh, 0.65rem);
+  }
+
+  #cursos-online.cursos .cursos__text {
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    line-height: 1.5;
+  }
+
+  #cursos-online.cursos .cursos__channel {
+    width: 100%;
+    max-width: none;
+    margin-top: clamp(0.5rem, 1.2vh, 0.9rem);
   }
 }
